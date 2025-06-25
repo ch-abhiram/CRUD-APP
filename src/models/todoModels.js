@@ -8,13 +8,9 @@ const todoSchema = mongoose.Schema({
     description : {
         type : String
     },
-    Name : {
-        type : String,
-        required : true
-    },
     completed : {
         type : Boolean,
         default : false
     }
 })
-export const todo = mongoose.model('todo', todoSchema);
+export const Todo = mongoose.model('Todo', todoSchema);
