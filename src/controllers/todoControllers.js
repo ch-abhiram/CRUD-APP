@@ -1,15 +1,22 @@
 import { Todo } from "../models/todoModels.js";
 
-//create todo
-export const createTodo = async(req,res)=>{
+// create a Todo
+export const createTodo = async (req, res) => {
     try {
-        const { title, description }= req.body;
+        const { title, description } = req.body;
         const newTodo = await Todo.create({
             title,
             description
-    })
-    res.status(201).json(newTodo);
+        })
+        res.status(201).json(newTodo);
     } catch (error) {
-        res.status(404).json({message: error.message})
+        res.status(404).json({message : error.message})
     }
 }
+
+
+
+
+// read a Todo
+// update
+// Delete
